@@ -1,0 +1,32 @@
+<h1>Input binding</h1>
+<ol>
+	<li>    
+    <div>
+      <h3>Using ngModel (2-way)</h3>
+      <input type="text" [(ngModel)]="ip1">
+      <h4>Output: {{ip1}}</h4>
+    </div>
+  </li>
+	<li>
+    <div>
+      <h3>Using @ViewChild (2-way)</h3>
+      <input type="text" #ip2>
+      <button (click)="showOp2()">Show</button>
+      <h4>Output: {{output2}}</h4>
+    </div>
+  </li>
+	<li>
+    <div>
+      <h3>Using $event binding (1-way)</h3>
+      <input type="text" (keyup)="onKeyupInput($event)">
+      <h4>Output: {{output3}}</h4>
+    </div>
+  </li>
+	<li>
+    <div>
+      <h3>Using ref id binding (1-way)</h3>
+      <input type="text" #ipRef (keyup)="onKeyupInputRef(ipRef.value)">
+      <h4>Output: {{output4}}</h4>
+    </div>
+  </li>
+</ol>
